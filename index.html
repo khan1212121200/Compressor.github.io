@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Compressor</h1>
+        
+        <div class="upload-section">
+            <button id="uploadBtn" class="button-3d">
+                <i class="fas fa-plus"></i> Add Image
+            </button>
+            <input type="file" id="imageInput" accept="image/*" hidden>
+        </div>
 
+        <div class="image-sections">
+            <div class="section original-section">
+                <h2>Original Image</h2>
+                <div class="image-container" id="originalImageContainer">
+                    <img id="originalImage" src="" alt="" style="display: none;">
+                </div>
+                <button id="deleteBtn" class="button-3d delete-btn" style="display: none;">
+                    <i class="fas fa-trash"></i>
+                </button>
+                <div class="image-info" id="originalInfo"></div>
+            </div>
+
+            <div class="section compressed-section">
+                <h2>Compressed Image</h2>
+                <div class="image-container" id="compressedImageContainer">
+                    <img id="compressedImage" src="" alt="" style="display: none;">
+                </div>
+                <div class="compression-controls">
+                    <div class="quality-control">
+                        <label for="qualitySlider">Quality:</label>
+                        <input type="range" id="qualitySlider" min="0" max="100" value="70">
+                        <span id="qualityValue">70%</span>
+                    </div>
+                    <button id="compressBtn" class="button-3d" style="display: none;">
+                        Compress
+                    </button>
+                    <button id="downloadBtn" class="button-3d" style="display: none;">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
+                <div class="image-info" id="compressedInfo"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
